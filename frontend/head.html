@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <title>Head Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        #profile{
+            background-color: rgb(225, 94, 210);
+        }
+        #WorklogSection{
+            align-items: center;
+            background-color:#c5e8fa;
+        }
+        .search-bar {
+            width: 600px;
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow:0 2px 4px 2px #d1d5db;
+            border: none;
+            background-color: whitesmoke;
+        }
+        .section {
+            padding: 24px;
+            flex: 1;
+            
+        }
+
+        .section h2 {
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            font-size:x-large;
+        }
+  
+       
+        .view-btn{
+            background-color:#33cc33 ;
+            color: white;
+            border: none;
+            font-size: 17px;
+            border-radius:8px;
+            padding: 5px;
+            box-shadow:0px 4px 4px #d1d5db;
+        }
+        .view-btn:hover { background-color: #34b73f}
+        .viewed-btn{
+            background-color:#7ff47f ;
+            color: white;
+            border: none;
+            font-size: 17px;
+            border-radius:8px;
+            padding: 5px;
+            box-shadow:0px 4px 4px #d1d5db;
+        }
+        
+    </style>
+</head>
+<body>
+ 
+    <div class="sidebar">
+        <h1>HEAD'S DASHBOARD</h1>
+        <nav>
+            <button>Worklogs</button>
+        </nav>
+        <footer>
+            <button id="footer" class="footer-btn" onclick="window.location.href='index.html'">Log out</button>
+        </footer>
+    </div>
+
+    <div class="main-content">
+
+        <header class="header">
+            <h1>FACULTY WORKLOG PORTAL</h1>
+            <input type="text" class="search-bar" placeholder="Search Faculty">
+            <button id="profile" class="profile-button">S</button>
+        </header>
+
+    <div id="WorklogSection" class="section">
+        <h2>Worklogs</h2>
+        <div class="worklog-item">
+            <div class="item">
+                <span>Mr.Raja Y</span>
+                <div>
+                    <button class="view-btn" onclick="window.location.href='headWorklog.html'">View</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Prof.Sofia Y</span>
+                <div>
+                    <button class="view-btn">View</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Dr.Chezhiyan C</span>
+                <div>
+                    <button class="view-btn">View</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Mr.Chandru R</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Prof.Sharad S</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Prof.Gurmeet V</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

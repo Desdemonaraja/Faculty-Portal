@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+    <title>headWorklog</title>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            background-color:#c5e8fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #WorklogForm{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+        }
+        label{
+            display:block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button{
+            width: 30%;
+            margin: 20px 67px;
+            padding: 9px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        #rejectButton{
+            background-color:blue;
+        }
+        #approveButton{
+            background-color: green;
+        }
+        #reasonContainer{
+            margin-top: 5px;
+        }
+        #reasonContainer input[type="text"]{
+            border-color: red;
+        }
+        .hidden{
+            display: none;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="WorklogForm">
+            <h2>Prof. Raja R</h2>
+            <label>Worklog for:</label>
+            <input type="text" id="worklog" value="Academic Class" disabled>
+
+            <label for="date">Date:</label>
+            <input type="text" id="date" value="12/08/2024" disabled>
+
+            <label>Start time : </label>
+            <input type="text" id="startime" value="12.00 pm" disabled>
+
+            <label>End time : </label>
+            <input type="text" id="endTime" value="01.00 pm" disabled>
+
+            <label>Description of work: </label>
+            <input type="text" id="description" value="Unit-2,LM-1" disabled>
+
+            <label>Upload Image/Geotag:</label>
+            <input type="text" id="upload" disabled>
+
+            <div class="flex-container">
+                <button id="rejectButton">Reject</button>
+                <button id="approveButton">Approve</button>
+            </div>
+
+            <div id="reasonContainer" class="hidden">
+                <label for="reason">Reason: </label>
+                <input type="text" id="reason">
+                <button id="reasonSubmitButton" style="margin-top: 10px; background-color: rgb(99, 166, 253);">Submit</button>
+            </div>
+            <button id="submitButton" style="margin-top: 20px;" class="hidden">Submit</button>
+        </div>
+    
+    <script>
+        const rejectButton = document.getElementById('rejectButton');
+        const approveButton = document.getElementById('approveButton');
+        const reasonContainer=document.getElementById('reasonContainer');
+        const reasonSubmitButton = document.getElementById('reasonSubmitButton');
+        const submitButton = document.getElementById('submitButton');
+        const reasonInput = document.getElementById('reason');
+        const inputs =  document.querySelectorAll('input');
+
+        rejectButton.addEventListener('click',() => {
+            reasonContainer.classList.remove('hidden');
+            approveButton.hidden=true;
+        });
+
+        reasonSubmitButton.addEventListener('click',() => {
+            const reasonText = reasonInput.value.trim();
+            if(reasonText!==""){
+                reasonInput.disabled = true;
+                approveButton.hidden=true;
+                rejectButton.hidden=true;
+                reasonSubmitButton.hidden=true;
+                submitButton.classList.remove('hidden');
+                submitButton.textContent = "Rejected";
+                submitButton.style.backgroundColor = 'red';
+            }
+        });
+
+        approveButton.addEventListener('click',() => { 
+            approveButton.hidden=true;
+            rejectButton.hidden=true;
+            reasonContainer.hidden=true;
+            submitButton.classList.remove('hidden');
+            submitButton.textContent = "Approved";
+            submitButton.style.backgroundColor = "green";
+        })
+    </script>
+</body>
+</html>

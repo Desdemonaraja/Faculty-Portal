@@ -1,0 +1,113 @@
+body {
+    background-color: #c5e8fa;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    background-color: #3b82f6;
+    padding: 16px;
+    height: 790px;
+    border-radius: 15px;
+}
+
+.sidebar h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    text-align: center;
+    text-shadow: 0px 4px 6px rgb(242, 66, 107);
+}
+
+.sidebar button {
+    display: block;
+    background-color: #93c5fd;
+    color: black;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 15px;
+    margin-bottom: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+.sidebar button:hover { background-color: #1b51f3} 
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    color: red;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgb(242, 66, 107);
+}
+
+.header .profile-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #6b46c1;
+    color: white;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 2px grey;
+}
+
+.worklog-item {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4px;
+    
+}
+
+.worklog-item .item {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.worklog-item .item span {
+    font-size: 0.875rem;
+    margin-left:10px;
+    width : 70%;
+}
+footer{
+    align-items: flex;
+}
+#footer {
+    background-color: rgb(241, 242, 243);
+    border: 2px solid #f11e37;
+    padding: 10px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    align-items:last baseline;
+}
+#footer:hover { background-color: #ff4d53}

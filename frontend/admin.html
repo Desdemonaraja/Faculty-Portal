@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel ="stylesheet" href="style.css">
+    <style>
+        
+        #profile{
+            background-color: cyan;
+        }
+        #WorklogSection{
+            align-items: center;
+            background-color: #c5e8fa;
+        }
+        .search-bar {
+            width: 600px;
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow:0 2px 4px 2px #d1d5db;
+            border: none;
+            background-color: whitesmoke;
+        }
+        .section {
+            padding: 24px;
+            flex: 1;
+            
+        }
+
+        .section h2 {
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            font-size:x-large;
+        }
+       
+        .view-btn{
+            background-color:#33cc33 ;
+            color: white;
+            border: none;
+            font-size: 17px;
+            border-radius:8px;
+            padding: 5px;
+            box-shadow:0px 4px 4px #d1d5db;
+        }
+        .view-btn:hover { background-color: #34b73f}
+        .viewed-btn{
+            background-color:#7ff47f ;
+            color: white;
+            border: none;
+            font-size: 17px;
+            border-radius:8px;
+            padding: 5px;
+            box-shadow:0px 4px 4px #d1d5db;
+        }
+        footer{
+            align-items: flex-end;
+        }
+        .footer-btn {
+            background-color: white;
+            border: 2px solid #4da6ff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            align-items:last baseline;
+        }
+        .footer-btn:hover { background-color: #4da6ff}
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <h1>ADMIN'S DASHBOARD</h1>
+        <nav>
+            <button>Worklogs</button>
+        </nav>
+        <footer>
+            <button id = "footer" class="footer-btn" onclick="window.location.href='index.html'">Log out</button>
+        </footer>
+    </div> 
+
+    <div class="main-content">
+        <header class="header">
+            <h1>FACULTY WORKLOG PORTAL</h1>
+            <input type="text" class="search-bar" placeholder="Search Faculty">
+            <button id="profile" class="profile-button">K</button>
+        </header>
+    <div id="WorklogSection" class="section">
+        <h2>Worklogs</h2>
+        <div class="worklog-item">
+            <div class="item">
+                <span>Mr.Raja P</span>
+                <div>
+                    <button class="view-btn" onclick="window.location.href='adminWorklog.html'">View</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Dr.Ramya G</span>
+                <div>
+                    <button class="view-btn">View</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Mr.Pradeep Y</span>
+                <div>
+                    <button class="view-btn">View</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Prof.Sharad A</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Dr.Sofia Y</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Prof. Kratika V</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <span>Prof. Gurmeet S</span>
+                <div>
+                    <button class="viewed-btn">Viewed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+</body>
+</html>
